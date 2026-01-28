@@ -1,0 +1,4 @@
+Getting started
+---------------
+
+Put cybert.xml inside /home/your_username/android/lineage/.repo/local_manifests
