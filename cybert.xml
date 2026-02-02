@@ -6,23 +6,28 @@
   <project path="device/motorola/cybert" name="android_device_motorola_cybert" remote="mt6897-devs" clone-depth="1000"/>
   <project path="device/motorola/cybert-kernel" name="android_device_motorola_cybert-kernel" remote="mt6897-devs" clone-depth="1000"/>
 
-  <project path="kernel/motorola/cybert" name="android_kernel_motorola_cybert" remote="mt6897-devs" clone-depth="1000"/>
-  <project path="kernel/motorola/cybert-modules" name="android_kernel_motorola_cybert-modules" remote="mt6897-devs" clone-depth="1000"/>
-
   <project path="vendor/motorola/cybert" name="proprietary_vendor_motorola_cybert" remote="mt6897-devs" clone-depth="1000"/>
   <project path="vendor/motorola/cybert-motcamera" name="proprietary_vendor_motorola_cybert-motcamera" remote="mt6897-devs" clone-depth="1000"/>
 
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/mtkcam" name="android_vendor_mediatek_kernel_modules_mtkcam" remote="mt6897-devs" clone-depth="1000"/>
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/gpu" name="android_vendor_mediatek_kernel_modules_gpu" remote="mt6897-devs" clone-depth="1000"/>
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/hbt_driver_cus" name="android_vendor_mediatek_kernel_modules_hbt_driver_cus" remote="mt6897-devs" clone-depth="1000"/>
-  
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/connectivity/common" name="android_vendor_mediatek_kernel_modules_connectivity_common" remote="mt6897-devs" clone-depth="1000"/>
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/connectivity/conninfra" name="android_vendor_mediatek_kernel_modules_connectivity_conninfra" remote="mt6897-devs" clone-depth="1000"/>
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/connectivity/connfem" name="android_vendor_mediatek_kernel_modules_connectivity_connfem" remote="mt6897-devs" clone-depth="1000"/>
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/connectivity/bt_linux_v2" name="android_vendor_mediatek_kernel_modules_connectivity_bt_linux_v2" remote="mt6897-devs" clone-depth="1000"/>
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/connectivity/wlan_adaptor" name="android_vendor_mediatek_kernel_modules_connectivity_wlan_adaptor" remote="mt6897-devs" clone-depth="1000"/>
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/connectivity/fmradio" name="android_vendor_mediatek_kernel_modules_connectivity_fmradio" remote="mt6897-devs" clone-depth="1000"/>
-  <project path="kernel/motorola/cybert-modules/vendor/mediatek/kernel_modules/connectivity/gps" name="android_vendor_mediatek_kernel_modules_connectivity_gps" remote="mt6897-devs" clone-depth="1000"/>
+  <project path="kernel/motorola/cybert" name="android_kernel_motorola_cybert" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="kernel" />
+  <project path="kernel/motorola/cybert-modules" name="android_kernel_motorola_cybert-modules" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="kernel" />
+  <project path="kernel/motorola/motorola/kernel/modules" name="android_motorola_kernel_modules" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+
+  <!-- Vendor Modules (Motorola) -->
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/wlan/core/gen4m" name="android_vendor_mediatek_kernel-modules_connectivity_wlan_core_gen4m" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/bt/linux_v2" name="android_vendor_mediatek_kernel_modules_connectivity_bt_linux_v2" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/bt/mt66xx" name="android_vendor_mediatek_kernel_modules_connectivity_bt_mt66xx" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/bt/mt76xx/sdio" name="android_vendor_mediatek_kernel_modules_connectivity_bt_mt76xx_sdio" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/common" name="android_vendor_mediatek_kernel_modules_connectivity_common" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/connfem" name="android_vendor_mediatek_kernel_modules_connectivity_connfem" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/conninfra" name="android_vendor_mediatek_kernel_modules_connectivity_conninfra" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/fmradio" name="android_vendor_mediatek_kernel_modules_connectivity_fmradio" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/gps" name="android_vendor_mediatek_kernel_modules_connectivity_gps" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/wlan/adaptor" name="android_vendor_mediatek_kernel_modules_connectivity_wlan_adaptor" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/gpu" name="android_vendor_mediatek_kernel_modules_gpu" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/met_drv_v3" name="android_vendor_mediatek_kernel_modules_met_drv_v3" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/mtkcam" name="android_vendor_mediatek_kernel_modules_mtkcam" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules/hbt_driver_cus"  name="android_vendor_mediatek_kernel-modules_hbt_driver_cus" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
 
   <project path="vendor/mediatek/ims" name="android_vendor_mediatek_ims" remote="mt6897-devs" clone-depth="1000"/>
 
