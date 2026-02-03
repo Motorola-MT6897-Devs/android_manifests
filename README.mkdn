@@ -2,3 +2,18 @@ Getting started
 ---------------
 
 Put cybert.xml inside /home/your_username/android/lineage/.repo/local_manifests
+
+How to build
+---------------
+
+repo sync -j12
+
+source build/envsetup.sh
+
+breakfast cybert
+
+mka installclean
+
+./device/motorola/cybert/bazel_cybert.sh
+
+mka bacon -j12
