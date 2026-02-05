@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   
-  <remote  name="aosp_custom" fetch="https://android-review.googlesource.com/"/>
-  <default revision="main-kernel-build-2023" remote="aosp_custom" sync-j="4"/>
+  <remote  name="aosp_custom" fetch="https://android-review.googlesource.com/" revision="main-kernel-build-2023"/>
   <remote name="moto_devs" fetch="https://github.com/Motorola-MT6897-Devs/"/>
   
   <!--Cybert device tree and vendor blobs -->
