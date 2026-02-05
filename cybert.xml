@@ -1,91 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   
-  <remote name="aosp_custom"
-          fetch="https://android.googlesource.com/"
-          review="https://android-review.googlesource.com/" 
-          revision="main-kernel-2026" />
-
-  <remote name="mt6897-devs" 
-          fetch="https://github.com/Motorola-MT6897-Devs"
-          revision="lineage-23.0" />
-
-  <project path="device/motorola/cybert" name="android_device_motorola_cybert" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1000"/>
-  <project path="device/motorola/cybert-kernel" name="android_device_motorola_cybert-kernel" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1000"/>
-
-  <project path="vendor/motorola/cybert" name="proprietary_vendor_motorola_cybert" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1000"/>
-  <project path="vendor/motorola/cybert-motcamera" name="proprietary_vendor_motorola_cybert-motcamera" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1000"/>
-           
-  <!-- AOSP External Projects -->
-  <project path="kernel/motorola/external/libcap" name="platform/external/libcap" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/libcap-ng" name="platform/external/libcap-ng" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazel-skylib" name="platform/external/bazel-skylib" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-rules_cc" name="platform/external/bazelbuild-rules_cc" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-platforms" name="platform/external/bazelbuild-platforms" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-rules_license" name="platform/external/bazelbuild-rules_license" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-rules_pkg" name="platform/external/bazelbuild-rules_pkg" remote="aosp_custom" clone-depth="1"  groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-rules_python" name="platform/external/bazelbuild-rules_python" remote="aosp_custom"  clone-depth="1"  groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-rules_proto" name="platform/external/bazelbuild-rules-proto" remote="aosp_custom" revision="master" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-rules_java" name="platform/external/bazelbuild-rules_java" remote="aosp_custom" revision="android16-release" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/protobuf" name="platform/external/protobuf" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazel-contrib-bazel_features" name="platform/external/bazel-contrib-bazel_features" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/zlib" name="platform/external/zlib" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-rules_rust" name="platform/external/bazelbuild-rules_rust" remote="aosp_custom" clone-depth="1"  groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-bazel-central-registry" name="platform/external/bazelbuild-bazel-central-registry" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/python/absl-py" name="platform/external/python/absl-py" remote="aosp_custom" clone-depth="1"  groups="external" />
-  <project path="kernel/motorola/external/bazelbuild-rules_shell" name="platform/external/bazelbuild-rules_shell" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/pigz" name="platform/external/pigz" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/toybox" name="platform/external/toybox" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/lz4" name="platform/external/lz4" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/zopfli" name="platform/external/zopfli" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/kmod" name="platform/external/kmod" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/dtc" name="platform/external/dtc" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazel-contrib-rules_devicetree" name="platform/external/bazel-contrib-rules_devicetree" remote="aosp_custom" clone-depth="1" groups="external" />
-  <project path="kernel/motorola/external/bazel-contrib-supply-chain" name="platform/external/bazel-contrib-supply-chain" remote="aosp_custom" clone-depth="1" groups="external" />
+  <remote  name="aosp_custom" fetch="https://android-review.googlesource.com/"/>
+  <default revision="main-kernel-build-2023" remote="aosp_custom" sync-j="4"/>
+  <remote name="moto_devs" fetch="https://github.com/Motorola-MT6897-Devs/"/>
   
-  <!-- Prebuilts -->
-  <project path="kernel/motorola/prebuilts/bazel/linux-x86_64" name="platform/prebuilts/bazel/linux-x86_64" remote="aosp_custom" revision="android16-release" clone-depth="1" groups="prebuilts" />
-  <project path="kernel/motorola/prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" remote="aosp_custom" clone-depth="1" groups="prebuilts" />
-  <project path="kernel/motorola/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" remote="aosp_custom" clone-depth="1" groups="prebuilts" />
-  <project path="kernel/motorola/prebuilts/build-tools" name="platform/prebuilts/build-tools" remote="aosp_custom" clone-depth="1" groups="prebuilts" />
-  <project path="kernel/motorola/prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" remote="aosp_custom" clone-depth="1" groups="prebuilts" />
-  <project path="kernel/motorola/prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" remote="aosp_custom" clone-depth="1" groups="prebuilts" />
-  <project path="kernel/motorola/prebuilts/rust" name="platform/prebuilts/rust" remote="aosp_custom" clone-depth="1" groups="prebuilts" />
-  <project path="kernel/motorola/prebuilts/clang-tools" name="platform/prebuilts/clang-tools" remote="aosp_custom" clone-depth="1" groups="prebuilts" />
-   
-  <!-- NDK Prebuilts (From Toolchain) -->
-  <project path="kernel/motorola/prebuilts/ndk-r27" name="toolchain/prebuilts/ndk/r27" remote="aosp_custom" clone-depth="1" groups="prebuilts" />
-  <project path="kernel/motorola/prebuilts/ndk-r26" name="toolchain/prebuilts/ndk/r26" remote="aosp_custom" clone-depth="1" groups="prebuilts" />
-  <!-- Build Systems -->
-  <project path="kernel/motorola/build/bazel_common_rules" name="platform/build/bazel_common_rules" remote="aosp_custom" revision="android16-release" clone-depth="1" groups="build" />
-  <project path="kernel/motorola/build/kernel" name="kernel/build" remote="aosp_custom" clone-depth="1" groups="kernel" />
-  <project path="kernel/motorola/build/bazel_mgk_rules" name="android-build-bazel_mgk_rules" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="build" />
-  <project path="kernel/motorola/system/tools/mkbootimg" name="platform/system/tools/mkbootimg" remote="aosp_custom" clone-depth="1" groups="build" />
-
-  <project path="kernel/motorola/kernel-6.1" name="android_kernel_motorola_cybert" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="kernel" />
-  <project path="kernel/motorola/kernel_device_modules-6.1" name="android_kernel_motorola_cybert-modules" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="kernel" />
-  <project path="kernel/motorola/motorola/kernel/modules" name="android_motorola_kernel_modules" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-
-  <!-- Vendor Modules (Motorola) -->
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/wlan/core/gen4m" name="android_vendor_mediatek_kernel-modules_connectivity_wlan_core_gen4m" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/bt/linux_v2" name="android_vendor_mediatek_kernel_modules_connectivity_bt_linux_v2" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/bt/mt66xx" name="android_vendor_mediatek_kernel_modules_connectivity_bt_mt66xx" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/bt/mt76xx/sdio" name="android_vendor_mediatek_kernel_modules_connectivity_bt_mt76xx_sdio" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/common" name="android_vendor_mediatek_kernel_modules_connectivity_common" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/connfem" name="android_vendor_mediatek_kernel_modules_connectivity_connfem" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/conninfra" name="android_vendor_mediatek_kernel_modules_connectivity_conninfra" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/fmradio" name="android_vendor_mediatek_kernel_modules_connectivity_fmradio" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/gps" name="android_vendor_mediatek_kernel_modules_connectivity_gps" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/connectivity/wlan/adaptor" name="android_vendor_mediatek_kernel_modules_connectivity_wlan_adaptor" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/gpu" name="android_vendor_mediatek_kernel_modules_gpu" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/met_drv_v3" name="android_vendor_mediatek_kernel_modules_met_drv_v3" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/mtkcam" name="android_vendor_mediatek_kernel_modules_mtkcam" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-  <project path="kernel/motorola/vendor/mediatek/kernel_modules/hbt_driver_cus"  name="android_vendor_mediatek_kernel-modules_hbt_driver_cus" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1" groups="vendor" />
-
-  <project path="vendor/mediatek/ims" name="android_vendor_mediatek_ims" remote="mt6897-devs" revision="lineage-23.0" clone-depth="1000"/>
-
+  <!--Cybert device tree and vendor blobs -->
+  <project path="device/motorola/cybert" name="android_device_motorola_cybert" remote="moto_devs" revision="lineage-23.0" clone-depth="1000"/>
+  <project path="vendor/motorola/cybert" name="proprietary_vendor_motorola_cybert" remote="moto_devs" revision="lineage-23.0" clone-depth="1000"/>
+  <project path="vendor/motorola/cybert-motcamera" name="proprietary_vendor_motorola_cybert-motcamera" remote="moto_devs" revision="lineage-23.0" clone-depth="1000"/>
+  
+  
+  <project path="vendor/mediatek/ims" name="android_vendor_mediatek_ims" remote="moto_devs" revision="lineage-23.0" clone-depth="1000"/>
   <project path="hardware/motorola" name="LineageOS/android_hardware_motorola" revision="lineage-23.0" groups="pdk" clone-depth="1000"/>
   <project path="hardware/mediatek" name="LineageOS/android_hardware_mediatek" revision="lineage-23.0" groups="pdk" clone-depth="1000"/>
   <project path="device/mediatek/sepolicy_vndr" name="LineageOS/android_device_mediatek_sepolicy_vndr" revision="lineage-23.0" groups="pdk" clone-depth="1000"/>
+  
+  <!--Kernel build tools -->
+  <superproject name="kernel/motorola/kernel/superproject" remote="aosp" revision="common-android14-6.1"/>
+  <project path="kernel/motorola/build/kernel" name="kernel/build" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/common" name="kernel/common" remote="aosp_custom" revision="android14-6.1" clone-depth="1"/>
+  <project path="kernel/motorola/kernel/configs" name="kernel/configs" remote="aosp_custom" revision="main" clone-depth="1"/>
+  <project path="kernel/motorola/kernel/tests" name="kernel/tests" remote="aosp_custom" revision="main" clone-depth="1"/>
+  <project path="kernel/motorola/common-modules/virtual-device" name="kernel/common-modules/virtual-device" remote="aosp_custom" revision="android14-6.1" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/build-tools" name="platform/prebuilts/build-tools" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/clang-tools" name="platform/prebuilts/clang-tools" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/tradefed" name="platform/tools/tradefederation/prebuilts" remote="aosp_custom" revision="main" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/asuite" name="platform/prebuilts/asuite" remote="aosp_custom" revision="main" clone-depth="1"/>
+  <project path="kernel/motorola/tools/mkbootimg" name="platform/system/tools/mkbootimg" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/bazel/linux-x86_64" name="platform/prebuilts/bazel/linux-x86_64" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/prebuilts/ndk-r23" name="toolchain/prebuilts/ndk/r23" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/external/bazel-skylib" name="platform/external/bazel-skylib" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/build/bazel_common_rules" name="platform/build/bazel_common_rules" remote="aosp_custom" clone-depth="1"/>
+  <project path="kernel/motorola/external/stardoc" name="platform/external/stardoc" remote="aosp_custom" clone-depth="1" />
+  <project path="kernel/motorola/external/python/absl-py" name="platform/external/python/absl-py" remote="aosp_custom" clone-depth="1" />
+
+  <!-- Cybert kernel sources -->
+  <project path="kernel/motorola/kernel-6.1" name="android_kernel_motorola_cybert" remote="moto_devs" revision="lineage-23.0" clone-depth="1"/>
+  <project path="kernel/motorola/kernel_device_modules-6.1" name="android_kernel_motorola_cybert-modules" remote="moto_devs" revision="lineage-23.0" clone-depth="1"/>
+
+  <!-- MediaTek kernel modules -->
+  <project path="kernel/motorola/vendor/mediatek/kernel_modules" name="android_vendor_mediatek_kernel_modules" remote="moto_devs" revision="lineage-23.0" clone-depth="1" groups="vendor"/>
+
+  <!-- Motorola kernel modules -->
+  <project path="kernel/motorola/motorola/kernel/modules" name="android_motorola_kernel_modules" remote="moto_devs" revision="lineage-23.0" clone-depth="1"/>
+  
+  <!-- Motorola bazek mgk rules-->
+  <project path="kernel/motorola/build/bazel_mgk_rules" name="android-build-bazel_mgk_rules" remote="moto_devs" revision="lineage-23.0" clone-depth="1"/>
+  
+  <!-- Cybert stock prebuilt kernel and modules -->
+  <project path="device/motorola/cybert-kernel" name="android_device_motorola_cybert-kernel" remote="moto_devs" revision="lineage-23.0" clone-depth="1000"/>
 
 </manifest>
